@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="HxPlayer.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <!-- Button to pick an audio file -->
+            <Button x:Name="PickFileButton" Text="Select Audio File" Clicked="OnPickFileButtonClicked" />
+
+            <!-- Label showing the selected file name -->
+            <Label x:Name="SelectedFileLabel" Text="No file selected" />
+
+            <!-- Playback controls -->
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Button x:Name="PlayButton" Text="Play" Clicked="OnPlayButtonClicked" />
+                <Button x:Name="PauseButton" Text="Pause" Clicked="OnPauseButtonClicked" />
+                <Button x:Name="StopButton" Text="Stop" Clicked="OnStopButtonClicked" />
+            </HorizontalStackLayout>
+
+            <!-- Hidden MediaElement for audio playback -->
+            <toolkit:MediaElement x:Name="mediaElement" 
+                              ShouldAutoPlay="False" 
+                              ShouldShowPlaybackControls="False" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
