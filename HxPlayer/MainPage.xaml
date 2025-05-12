@@ -7,20 +7,16 @@
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15">
 
-            <!-- Button to pick an audio file -->
             <Button x:Name="PickFileButton" Text="Select Audio File" Clicked="OnPickFileButtonClicked" />
 
-            <!-- Label showing the selected file name -->
             <Label x:Name="SelectedFileLabel" Text="No file selected" />
 
-            <!-- Playback controls -->
             <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
                 <Button x:Name="PlayButton" Text="Play" Clicked="OnPlayButtonClicked" />
                 <Button x:Name="PauseButton" Text="Pause" Clicked="OnPauseButtonClicked" />
                 <Button x:Name="StopButton" Text="Stop" Clicked="OnStopButtonClicked" />
             </HorizontalStackLayout>
 
-            <!-- Hidden MediaElement for audio playback -->
             <toolkit:MediaElement x:Name="mediaElement" 
                               ShouldAutoPlay="False" 
                               ShouldShowPlaybackControls="False" />
