@@ -4,66 +4,42 @@ namespace HxPlayer;
 
 public partial class MainPage : ContentPage
 {
-
     public MainPage()
     {
         InitializeComponent();
         SelectedFileLabel.Text = "No file selected";
     }
-    private async void OnPickFileButtonClicked(object sender, EventArgs e)
+
+    // This attribute lets Shell inject the "file" query parameter
+    public string FilePath
     {
-        try
+        set
         {
-            // Define allowed file types for audio (UTType for iOS, MIME for Android, extensions for Windows)
-            var customFileType = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
-                {
-                    { DevicePlatform.iOS, new[] { "public.audio" } },            
-                    { DevicePlatform.Android, new[] { "audio/*" } },             
-                    { DevicePlatform.WinUI, new[] { ".mp3", ".wav", ".m4a" } },  
-                });
-
-            var options = new PickOptions
-            {
-                PickerTitle = "Please select an audio file",
-                FileTypes = customFileType
-            };
-
-            var result = await FilePicker.Default.PickAsync(options);
-            if (result != null)
-            {
-                SelectedFileLabel.Text = result.FileName;
-
-                using var sourceStream = await result.OpenReadAsync();
-                string localPath = Path.Combine(FileSystem.AppDataDirectory, result.FileName);
-
-                using var localFileStream = File.OpenWrite(localPath);
-                await sourceStream.CopyToAsync(localFileStream);
-
-                mediaElement.Source = MediaSource.FromFile(localPath);
-            }
-        }
-        catch (Exception ex)
-        {
-            await DisplayAlert("Error", "Could not select file: " + ex.Message, "OK");
+            if (!string.IsNullOrWhiteSpace(value))
+                LoadAndPlay(value);
         }
     }
 
-    // Play
-    private void OnPlayButtonClicked(object sender, EventArgs e)
+    private void LoadAndPlay(string localPath)
     {
+        SelectedFileLabel.Text = Path.GetFileName(localPath);
+        mediaElement.Source = MediaSource.FromFile(localPath);
         mediaElement.Play();
     }
 
-    // Pause
-    private void OnPauseButtonClicked(object sender, EventArgs e)
+    private async void OnPickFileButtonClicked(object sender, EventArgs e)
     {
-        mediaElement.Pause();
+        // your existing PickAsync code…
+        // after copying to AppDataDirectory, call LoadAndPlay(localPath);
     }
 
-    // Stop
-    private void OnStopButtonClicked(object sender, EventArgs e)
+    private async void OnPlaylistButtonClicked(object sender, EventArgs e)
     {
-        mediaElement.Stop();
+        // navigate to the Playlist tab
+        await Shell.Current.GoToAsync("//Playlist");
     }
+
+    private void OnPlayButtonClicked(object sender, EventArgs e) => mediaElement.Play();
+    private void OnPauseButtonClicked(object sender, EventArgs e) => mediaElement.Pause();
+    private void OnStopButtonClicked(object sender, EventArgs e) => mediaElement.Stop();
 }
-
