@@ -4,23 +4,23 @@
              xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              x:Class="HxPlayer.MainPage">
 
-    <ScrollView>
-        <VerticalStackLayout Padding="20" Spacing="15">
+    <VerticalStackLayout Padding="20" Spacing="15">
+        <Label x:Name="SelectedFileLabel" 
+               Text="No file selected"
+               FontSize="18"
+               HorizontalOptions="Center" />
 
-            <Button x:Name="PickFileButton" Text="Select Audio File" Clicked="OnPickFileButtonClicked" />
+        <toolkit:MediaElement x:Name="mediaElement"
+                      HeightRequest="200" />
 
-            <Label x:Name="SelectedFileLabel" Text="No file selected" />
+        <HorizontalStackLayout Spacing="10">
+            <Button Text="Play" Clicked="OnPlayButtonClicked" />
+            <Button Text="Pause" Clicked="OnPauseButtonClicked" />
+            <Button Text="Stop" Clicked="OnStopButtonClicked" />
+        </HorizontalStackLayout>
 
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                <Button x:Name="PlayButton" Text="Play" Clicked="OnPlayButtonClicked" />
-                <Button x:Name="PauseButton" Text="Pause" Clicked="OnPauseButtonClicked" />
-                <Button x:Name="StopButton" Text="Stop" Clicked="OnStopButtonClicked" />
-            </HorizontalStackLayout>
-
-            <toolkit:MediaElement x:Name="mediaElement" 
-                              ShouldAutoPlay="False" 
-                              ShouldShowPlaybackControls="False" />
-        </VerticalStackLayout>
-    </ScrollView>
-
+        <Button Text="Pick a File…" Clicked="OnPickFileButtonClicked" />
+        <Button Text="Go to Playlist" Clicked="OnPlaylistButtonClicked" />
+    </VerticalStackLayout>
+    
 </ContentPage>
