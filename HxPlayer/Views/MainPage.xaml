@@ -13,12 +13,6 @@
         <toolkit:MediaElement x:Name="mediaElement"
                       HeightRequest="200" />
 
-        <HorizontalStackLayout Spacing="10">
-            <Button Text="Play" Clicked="OnPlayButtonClicked" />
-            <Button Text="Pause" Clicked="OnPauseButtonClicked" />
-            <Button Text="Stop" Clicked="OnStopButtonClicked" />
-        </HorizontalStackLayout>
-
         <Button Text="Pick a File…" Clicked="OnPickFileButtonClicked" />
         <Button Text="Go to Playlist" Clicked="OnPlaylistButtonClicked" />
     </VerticalStackLayout>
