@@ -11,16 +11,11 @@
 
             <Label x:Name="SelectedFileLabel" Text="No file selected" />
 
-            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
-                <Button x:Name="PlayButton" Text="Play" Clicked="OnPlayButtonClicked" />
-                <Button x:Name="PauseButton" Text="Pause" Clicked="OnPauseButtonClicked" />
-                <Button x:Name="StopButton" Text="Stop" Clicked="OnStopButtonClicked" />
-            </HorizontalStackLayout>
+            <toolkit:MediaElement x:Name="mediaElement"
+                     HeightRequest="200" />
 
-            <toolkit:MediaElement x:Name="mediaElement" 
-                              ShouldAutoPlay="False" 
-                              ShouldShowPlaybackControls="False" />
-        </VerticalStackLayout>
+            </VerticalStackLayout>
+
     </ScrollView>
 
 </ContentPage>

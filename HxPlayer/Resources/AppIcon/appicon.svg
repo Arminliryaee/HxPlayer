@@ -1,14 +1,22 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-<svg fill="#000000" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
-	 viewBox="0 0 54 54" xml:space="preserve">
-<g>
-	<polygon points="42,10.996 22,13.593 22,17 22,18.861 42,16.264 42,14.143 	"/>
-	<path d="M41.824,0H12.176C5.462,0,0,5.462,0,12.176v29.648C0,48.538,5.462,54,12.176,54h29.648C48.538,54,54,48.538,54,41.824
-		V12.176C54,5.462,48.538,0,41.824,0z M44,34.857c0,3.702-3.333,6.714-7.429,6.714c-4.096,0-7.428-3.012-7.428-6.714
-		s3.333-6.715,7.428-6.715c2.182,0,4.141,0.86,5.502,2.219C42.029,30.249,42,30.128,42,30V18.28l-20,2.598V41
-		c0,0.542,0-0.91,0,0.286C22,44.988,18.636,48,14.5,48S7,44.988,7,41.286s3.364-6.715,7.5-6.715c2.174,0,4.129,0.838,5.5,2.165V20
-		v-3v-4.286c0-0.503,0.373-0.927,0.871-0.991l22-2.856c0.283-0.039,0.572,0.051,0.789,0.24C43.876,9.296,44,9.569,44,9.857v4.285v3
-		V34"/>
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="1080" height="1080" viewBox="0 0 1080 1080" xml:space="preserve">
+<desc>Created with Fabric.js 5.2.4</desc>
+<defs>
+</defs>
+<g transform="matrix(1 0 0 1 540 540)" id="cd599e18-8b96-4477-959f-0050ae0daea1"  >
+<rect style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(86,17,88); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  x="-540" y="-540" rx="0" ry="0" width="1080" height="1080" />
+</g>
+<g transform="matrix(1 0 0 1 540 540)" id="3df11cae-af43-4d70-9f49-1a6854c106d3"  >
+</g>
+<g transform="matrix(1 0 0 1 540 540)"  >
+<g style="" vector-effect="non-scaling-stroke"   >
+		<g transform="matrix(14.81 0 0 14.81 74.07 -178.84)"  >
+<polygon style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  points="10,-3.93 -10,-1.34 -10,2.07 -10,3.93 10,1.34 10,-0.79 " />
+</g>
+		<g transform="matrix(14.81 0 0 14.81 0 0)"  >
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,0,0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(-27, -27)" d="M 41.824 0 L 12.176 0 C 5.462 0 0 5.462 0 12.176 L 0 41.824 C 0 48.538 5.462 54 12.176 54 L 41.824 54 C 48.538 54 54 48.538 54 41.824 L 54 12.176 C 54 5.462 48.538 0 41.824 0 z M 44 34.857 C 44 38.559 40.667 41.571 36.571 41.571 C 32.474999999999994 41.571 29.142999999999997 38.559 29.142999999999997 34.857 C 29.142999999999997 31.155 32.476 28.142 36.571 28.142 C 38.753 28.142 40.711999999999996 29.002 42.073 30.361 C 42.029 30.249 42 30.128 42 30 L 42 18.28 L 22 20.878 L 22 41 C 22 41.542 22 40.09 22 41.286 C 22 44.988 18.636 48 14.5 48 C 10.364 48 7 44.988 7 41.286 C 7 37.584 10.364 34.571 14.5 34.571 C 16.674 34.571 18.628999999999998 35.409 20 36.736 L 20 20 L 20 17 L 20 12.714 C 20 12.211 20.373 11.787 20.871 11.723 L 42.870999999999995 8.867 C 43.153999999999996 8.828000000000001 43.443 8.918000000000001 43.66 9.107000000000001 C 43.876 9.296 44 9.569 44 9.857 L 44 14.142 L 44 17.142 L 44 34" stroke-linecap="round" />
+</g>
+</g>
 </g>
 </svg>

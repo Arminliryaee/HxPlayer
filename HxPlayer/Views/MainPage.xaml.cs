@@ -17,9 +17,9 @@ public partial class MainPage : ContentPage
             // Define allowed file types for audio (UTType for iOS, MIME for Android, extensions for Windows)
             var customFileType = new FilePickerFileType(new Dictionary<DevicePlatform, IEnumerable<string>>
                 {
-                    { DevicePlatform.iOS, new[] { "public.audio" } },            
-                    { DevicePlatform.Android, new[] { "audio/*" } },             
-                    { DevicePlatform.WinUI, new[] { ".mp3", ".wav", ".m4a" } },  
+                    { DevicePlatform.iOS, new[] { "public.audio" , "public.video" } },            
+                    { DevicePlatform.Android, new[] { "audio/*","video/*" } },             
+                    { DevicePlatform.WinUI, new[] { ".mp3",".mp4", ".wav", ".m4a" } },  
                 });
 
             var options = new PickOptions
@@ -46,24 +46,6 @@ public partial class MainPage : ContentPage
         {
             await DisplayAlert("Error", "Could not select file: " + ex.Message, "OK");
         }
-    }
-
-    // Play
-    private void OnPlayButtonClicked(object sender, EventArgs e)
-    {
-        mediaElement.Play();
-    }
-
-    // Pause
-    private void OnPauseButtonClicked(object sender, EventArgs e)
-    {
-        mediaElement.Pause();
-    }
-
-    // Stop
-    private void OnStopButtonClicked(object sender, EventArgs e)
-    {
-        mediaElement.Stop();
     }
 }
 

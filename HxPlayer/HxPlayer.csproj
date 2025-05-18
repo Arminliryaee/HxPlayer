@@ -45,7 +45,7 @@
 		<!-- App Icon -->
 
 		<!-- Splash Screen -->
-		<MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#512BD4" BaseSize="128,128" />
+		<MauiIcon Include="Resources\AppIcon\appicon.svg" />
 
 		<!-- Images -->
 		<MauiImage Include="Resources\Images\*" />
@@ -59,11 +59,17 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\AppIcon\appicon.svg" />
+	  <AndroidResource Remove="ViewModels\**" />
+	  <Compile Remove="ViewModels\**" />
+	  <EmbeddedResource Remove="ViewModels\**" />
+	  <MauiCss Remove="ViewModels\**" />
+	  <MauiXaml Remove="ViewModels\**" />
+	  <None Remove="ViewModels\**" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiIcon Include="Resources\AppIcon\appicon.svg" />
+	  <None Remove="Resources\AppIcon\appiconfg.svg" />
+	  <None Remove="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -75,7 +81,14 @@
 
 	<ItemGroup>
 	  <Folder Include="Model\" />
-	  <Folder Include="ViewModels\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiImage Include="Resources\AppIcon\appiconfg.svg" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiSplashScreen Include="Resources\Splash\splash.svg" />
 	</ItemGroup>
 
 </Project>
